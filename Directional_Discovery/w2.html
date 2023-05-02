@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>west</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+    body {
+        background-color: #F9F9F9;
+        font-family: Arial, sans-serif;
+        background-image: url(https://wallpapercave.com/wp/wp12261828.jpg);
+        background-position: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        color: #000000;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    p {
+        font-size: 40px;
+        margin-top: 50px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .input-wrapper {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="text"] {
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: block;
+        width: 50%;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .button-wrapper {
+        display: flex;
+    }
+
+    #submit-button,
+    #Clue-button,
+    #restart-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        border-radius: 12px;
+    }
+
+    #submit-button:hover,
+    #Clue-button:hover,
+    #restart-button:hover {
+        background-color: #3e8e41;
+        color: white;
+    }
+    .clue-text {
+        color: #000000;
+        font-size: 28px;
+        text-align: center;
+        margin-top: 10px;
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>West</h1>
+    <p>Did we invent math or did we discover it?</p>
+    <div class="input-wrapper">
+        <input type="text" id="answer-input" placeholder="enter your answer">
+        <div class="button-wrapper">
+            <button id="submit-button">Submit</button>
+            <button id="Clue-button">Clue</button>
+            <button id="restart-button">Restart</button>
+        </div>
+    </div>
+    <div id="clue-text" class="clue-text"></div>
+    <script>
+        // Get the button and the clue text element
+        var button = document.getElementById("Clue-button");
+        var clueText = document.getElementById("clue-text");
+
+        // Add event listeners to the button
+        button.addEventListener("mouseover", showClueText);
+        button.addEventListener("mouseout", hideClueText);
+
+        // Show the clue text when the mouse is over the button
+        function showClueText() {
+            clueText.innerHTML = "NO-CLUE";
+            clueText.style.display = "block";
+        }
+
+        // Hide the clue text when the mouse leaves the button
+        function hideClueText() {
+            clueText.style.display = "none";
+        }
+
+        const submitBtn = document.getElementById("submit-button");
+        const restartBtn = document.getElementById("restart-button");
+
+        submitBtn.addEventListener("click", () => {
+            alert("Wrong answer!");
+        });
+
+        restartBtn.addEventListener("click", () => {
+            window.location.href = "game.html";
+        });
+    </script>
+</body>
+
+</html>

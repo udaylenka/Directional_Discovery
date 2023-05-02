@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Directional Discovery - East</title>
+    <style>
+        body{
+            background-image: url(https://wallpapercave.com/wp/wp11994634.jpg);
+            background-position: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            animation: slide-in 1s ease-in-out;
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #start-button {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+        h1 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#start-button {
+  display: block;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #FFD700;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#start-button:hover {
+  background-color: #F0C808;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>You have selected East direction</h1>
+    <button id="start-button">Start</button>
+    <script>
+        const startButton = document.getElementById('start-button');
+        startButton.addEventListener('click', () => {
+            window.location.href = 'e1.html';
+        });
+
+    </script>
+</body>
+
+</html>

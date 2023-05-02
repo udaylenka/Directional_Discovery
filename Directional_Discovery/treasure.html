@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Treasure Found!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+      /* Add your custom CSS here */
+      body {
+        background-color: #000;
+        background-image: url(https://cdn.mos.cms.futurecdn.net/vWnbcefckasaTYNLXiVDre.jpeg);
+        overflow: hidden;
+        color: #fff;
+      }
+
+      video#bgVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+      }
+
+      .message {
+        font-size: 43px;
+        text-align: center;
+        margin-top: 50px;
+        animation-duration: 1.5s;
+        margin-top: 150px;
+      }
+
+      .soft-skill {
+        font-size: 24px;
+        margin-top: 50px;
+        text-align: center;
+        display: none;
+        animation-duration: 1.5s;
+        margin-top: 50px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 24px;
+        color: #fff;
+        background-color: #00a8e8;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        margin-top: 150px;
+      }
+      h1{
+        margin-top: 300px;
+        font-size: 48px;
+      }
+      button:hover {
+        background-color: #007a9d;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        margin-top: 50px;
+      }
+      .clue-text {
+        font-size: 28px;
+        text-align: center;
+        margin-top: 10px;
+        display: none;
+    }
+    </style>
+  </head> 
+  <body>
+    <video id="bgVideo" autoplay muted loop>
+      <source src="/vid.mp4" type="video/mp4">  
+    </video>
+    <div class="message animate__animated animate__fadeInDown">
+      <h1>Congratulations! You have found the treasure!</h1>
+    </div>
+    <div id="soft-skills"></div>
+    <button onclick="goHome()" class="animate__animated animate__fadeInUp">OK</button>
+    
+    <script>
+        let totalPoints = localStorage.getItem("points");
+        let softSkills = "";
+      
+        if (totalPoints > 470) {
+          softSkills =
+            "1) Eye for detail<br>2) Perseverance<br>3) Curiosity<br>4) Presence of mind<br>5) Time management";
+        } else if (totalPoints > 400) {
+          softSkills =
+            "1) Eye for detail<br>2) Perseverance<br>3) Presence of mind<br>4) Time management";
+        } else if (totalPoints > 350) {
+          softSkills =
+            "1) Eye for detail<br>2) Perseverance<br>3) Presence of mind";
+        } else if (totalPoints > 300) {
+          softSkills = "1) Eye for detail<br>2) Perseverance";
+        } else if (totalPoints > 250) {
+          softSkills = "1) Eye for detail<br>2) Presence of mind";
+        }
+      
+        alert("Your softskills" + softSkills);
+
+      // Redirect to home page
+      function goHome() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

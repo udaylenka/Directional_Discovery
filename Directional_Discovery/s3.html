@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>South - Puzzle</title>
+
+</head>
+<style>
+    /* Apply a default margin and padding to the body */
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url(https://wallpapercave.com/wp/wp9279877.jpg);
+    }
+
+    /* Style the heading and paragraph elements */
+    h1 {
+        font-family: Arial, sans-serif;
+        font-size: 2.5rem;
+        line-height: 2.0;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #dcfd08;
+    }
+    h2 {
+        font-family: Arial, sans-serif;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #ffffff;
+    }
+    p {
+        font-family: Arial, sans-serif;
+        font-size: 2.0rem;
+        line-height: 1.0;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #000000;
+    }
+
+    /* Style the button element */
+    button {
+        background-color: #007bff;
+        border: none;
+        border-radius: 0.25rem;
+        color: #fdfdfd;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Change the button background color on hover */
+    button:hover {
+        background-color: #0062cc;
+    }
+
+    /* Center the buttons container */
+    #buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <h1>congratulations!! </h1>
+    <h2>You have reached South destination</h2>
+    <p>As you approach the final treasure, you see a puzzle on the ground.</p>
+    <p>Solve it if you can ! and Treasure is Yours</p>
+
+    <div id="buttons-container">
+        <button id="start-button">solve puzzle</button>
+    </div>
+    <script>
+
+        // start button functionality
+        let startButton = document.getElementById('start-button');
+        startButton.addEventListener('click', () => {
+            window.location.href = 'puzzle.html';
+        });
+
+    </script>
+</body>
+
+</html>

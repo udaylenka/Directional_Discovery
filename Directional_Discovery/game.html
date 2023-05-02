@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Directional Discovery - Game</title>
+    <style>
+        body {
+            background-color: #92cecc;
+            font-family: cursive;
+            text-align: center;
+            background-image: url(https://wallpapercave.com/wp/wp4845949.jpg);
+            background-position: cover;
+            background-repeat: no-repeat;
+        }
+
+        p {
+            font-size: 30px;
+
+        }
+
+        h1 {
+            color: #4b86a3;
+            font-size: 4rem;
+            margin-top: 3rem;
+        }
+
+        button {
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2rem;
+            margin-top: 10rem;
+            padding: 1rem 2rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        .pirate-ship {
+            position: relative;
+            width: 600px;
+            height: 450px;
+            margin-top: 1rem;
+            animation: pirate-ship-animation 10s infinite;
+        }
+
+        .pirate-ship img {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            animation: pirate-animation 2s infinite;
+        }
+
+        @keyframes pirate-ship-animation {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(200px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pirate-animation {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(30deg);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Directional Discovery</h1>
+    <p>Hi captain! Which way do you want to go?</p>
+
+    <div>
+        <button onclick="goNorth()">North</button>
+        <button onclick="goSouth()">South</button>
+        <button onclick="goEast()">East</button>
+        <button onclick="goWest()">West</button>
+    </div>
+
+    <script>
+        function goNorth() {
+            // Handle north direction
+            window.location.href = "north.html";
+        }
+        function goSouth() {
+            // Handle south direction
+            window.location.href = "south.html";
+        }
+        function goEast() {
+            // Handle east direction
+            window.location.href = "east.html";
+        }
+        function goWest() {
+            // Handle west direction
+            window.location.href = "west.html";
+        }
+    </script>
+</body>
+
+</html>

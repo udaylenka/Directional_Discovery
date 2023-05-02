@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agame</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+        body {
+            color: black;
+            font-family: cursive;
+            background-image: url(https://wallup.net/wp-content/uploads/2018/09/26/133213-Gokukoku_no_Brynhildr-Neko_Kuroha-748x468.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+      .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-left: 70px;
+      }
+
+      .button:hover {
+        background-color: #0062cc;
+      }
+
+      .animate__animated {
+        animation-duration: 1s;
+      }
+
+      .animate__fadeInUp {
+        animation-name: fadeInUp;
+      }
+      .uday
+      {
+        margin-left: 600px;
+      }
+      #users{
+        margin-left: 80px;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="uday">
+      <h1>Directional Discovery</h1>
+      <button
+        class="animate__animated animate__fadeInUp button"
+        onclick="showUsers()"
+      >
+        Check User Details
+      </button>
+
+      <div id="users"></div>
+    </div>
+    <script>
+      function showUsers() {
+        // Send a request to the server to get the user details
+        fetch("get_users.php")
+          .then((response) => response.text())
+          .then((data) => {
+            // Display the user details in the HTML
+            document.getElementById("users").innerHTML = data;
+          });
+      }
+    </script>
+  </body>
+</html>
